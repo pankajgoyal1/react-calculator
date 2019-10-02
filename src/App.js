@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App" style={{"backgroundColor":"white"}}>
+    <div className="App" style={{"backgroundColor":"black","height":"100vh"}}>
       <Calculator />
     </div>
   );
