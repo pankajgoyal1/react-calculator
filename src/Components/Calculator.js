@@ -23,7 +23,8 @@ class Calculator extends React.Component {
         backgroundColor:"#fff"
       },
       keycolor:{
-        backgroundColor:"#f0f0f0"
+        backgroundColor:"#f0f0f0",
+        color:"#000"
       }
     };
     
@@ -176,7 +177,8 @@ class Calculator extends React.Component {
     }
     lightMode = ()=>{
       this.setState({keycolor:{
-        backgroundColor:"#f0f0f0"
+        backgroundColor:"#f0f0f0",
+        color:"#000"
       }})
       this.setState({style:{
         color:"#000",
@@ -185,7 +187,8 @@ class Calculator extends React.Component {
     }
     darkMode = () =>{
       this.setState({keycolor:{
-        backgroundColor:"#666"
+        backgroundColor:"#666",
+        color:"#fff"
       }})
       this.setState({style:{
         color:"#fff",
@@ -221,7 +224,7 @@ class Calculator extends React.Component {
           <CalculatorDisplay value={displayValue} />
           <div className="calculator-keypad" style={style} >
             <div className="input-keys" >
-              <div className="function-keys">
+              <div className="function-keys" style={style} >
                 <CalculatorKey className="key-clear" keycolor={keycolor} onPress={() => clearDisplay ? this.clearDisplay() : this.clearAll()}>{clearText}</CalculatorKey>
                 <CalculatorKey className="key-percent" keycolor={keycolor} onPress={() => this.inputPercent()}>%</CalculatorKey>
               </div>
